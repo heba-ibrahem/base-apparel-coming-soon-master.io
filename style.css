@@ -1,0 +1,249 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* colors */
+:root {
+    /* Primary */
+
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+
+    /* Neutral */
+
+    --darkGrayishRed: hsl(0, 6%, 24%);
+
+    /* Gradients */
+
+    --linear: 135deg, hsl(0, 92%, 90%), hsl(0, 79%, 84%);
+    --linearRed: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+
+}
+
+* {
+    margin: 0;
+    font-family: 'Josefin Sans';
+}
+
+/* Screens */
+/* web */
+@media screen and (max-width:1440px) {
+    .container {
+        background-image: url(images/bg-pattern-desktop.svg);
+    }
+    .content {
+        flex-direction: row;
+    }
+    .imageWeb {
+        width: 612px;
+        background: url(images/hero-desktop.jpg) no-repeat ;
+        
+    }
+    .imageMob {
+        display: none;
+    }
+    .data {
+        width: 450px;
+        padding: 65px 215px 160px 165px;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        width: 160px;
+        margin-bottom: 140px;
+    }
+    .title {
+        width: 360px;
+        font-size: 60px;
+        margin-bottom: 60px;
+    }
+    .para {
+        width: 430px;
+        margin-bottom: 45px;
+    }
+    .txtInput {
+        width: 420px;
+    }
+    .email {
+        width: 450px;
+    }
+    .btn {
+        width: 100px;
+        right: 7px;
+        height: 53px;
+    }
+    .btn.active {
+        right: 0;
+    }
+    .error {
+        bottom: 32px;
+        right: 120px;
+    }
+
+}
+
+/* mobile */
+@media screen and (max-width:375px) {
+    .container {
+        background-image: none;
+        background-color: #fff5f4;
+    }
+    .content {
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+    }
+    .imageWeb {
+        display: none;
+    }
+    .imageMob{
+        display: flex;
+        background-image: url(images/hero-mobile.jpg);
+        width: 375px;
+        height: 250px;
+        margin-bottom: 65px;
+    }
+    .data {
+        width: 375px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 100px;
+        align-self: flex-start;
+        margin:30px 0 35px 30px;
+    }
+    .title {
+        width: 230px;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .para {
+        width: 300px;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .email {
+        width: 285px;
+        justify-content: center;
+        margin-bottom: 100px;
+
+    }
+    .txtInput {
+        width: 313px;
+
+    }
+    .btn {
+        width: 65px;
+        right: -25px;
+        height: 53px;
+    }
+    .btn.active {
+        right: -28px;
+
+    }
+    .error {
+        right: 50px;
+    }
+   
+
+}
+
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2em;
+   
+}
+
+.title span {
+    font-weight: 300;
+    color: var(--desaturatedRed)
+}
+
+.para {
+    color: var(--desaturatedRed);
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+.txtInput {
+    border-radius: 50px;
+    border: 1px solid var(--desaturatedRed);
+    height: 50px;
+    padding-left: 20px;
+}
+
+.error {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0px;
+    display: none;
+}
+
+.btn {
+    background-image: linear-gradient(var(--linearRed));
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.btn.active {
+    background-image: linear-gradient(var(--linear));
+    box-shadow: 0px 8px 15px rgba(133, 11, 11, 0.3);
+    top: 0;
+    height: 56px;
+}
+
+.wrong {
+    font-size: 12px;
+    color: var(--softRed);
+    padding: 10px 30px;
+    display: none;
+}
+
+::placeholder {
+    color: var(--desaturatedRed);
+    margin-left: 10px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
